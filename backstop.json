@@ -1,5 +1,5 @@
 {
-  "id": "backstop_default",
+  "id": "PaymentForm",
   "viewports": [
     {
       "label": "phone",
@@ -16,9 +16,9 @@
   "onReadyScript": "puppet/onReady.js",
   "scenarios": [
     {
-      "label": "BackstopJS Homepage",
+      "label": "BackstopJS Test",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
-      "url": "https://garris.github.io/BackstopJS/",
+      "url": "http://localhost:8080/",
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",
