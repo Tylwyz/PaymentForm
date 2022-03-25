@@ -18,7 +18,7 @@
     {
       "label": "BackstopJS Test",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
-      "url": "http://localhost:8080/",
+      "url": "http://localhost:8080/", "http://localhost:8080/shipping", "http://localhost:8080/billing","http://localhost:8080/thankyou",
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",
