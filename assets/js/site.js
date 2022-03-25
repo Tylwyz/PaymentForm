@@ -63,6 +63,35 @@ if (html.id === 'home-page') {
 
 }
 
+function fillBilling() {
+  var jsObject = readJsonFromLocalStorage('shipping');
+  console.log(jsObject);
+  // grab the user input
+  var x = jsObject.shipname;
+  console.log(x);
+  var shipisbill = document.querySelector('#shipisbill').checked;
+
+  if (shipisbill == true) {
+    // set input fields the same as ship
+    document.querySelector("#bfirst-name").value = jsObject.firstname;
+    document.querySelector("#blast-name").value = jsObject.lastname;
+    document.querySelector("#baddress").value = jsObject.address;
+    document.querySelector("#bapartment").value = jsObject.appartment;
+    document.querySelector("#bcity").value = jsObject.city;
+    document.querySelector("#bstate").value = jsObject.state;
+    shipisbill.setAttribute('aria-checked', 'true');
+  } else if (shipisbill == false) {
+    // allow user to enter info
+    document.querySelector("#bfirst-name").value = "";
+    document.querySelector("##blast-name").value = "";
+    document.querySelector("#baddress").value = "";
+    document.querySelector("#bapartment").value = "";
+    document.querySelector("#bcity").value = "";
+    document.querySelector("#bstate").value = "";
+    shipisbill.setAttribute('aria-checked', 'false');
+  }
+}
+
   function handleFormSubmission(event) {
     var targetElement = event.target;
     event.preventDefault(); // STOP the default browser behavior
