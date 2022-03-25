@@ -9,7 +9,7 @@ html.classList.add('js');
 
 
 if (html.id === 'home-page') {
-  var newAccountFieldset = document.querySelectsiteor('fieldset[name="new"]');
+  var newAccountFieldset = document.querySelector('fieldset[name="new"]');
   var newAccountCheckbox = document.querySelector('#create');
 
   newAccountFieldset.setAttribute('disabled', 'disabled');
