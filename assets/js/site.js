@@ -1,3 +1,4 @@
+'Use strict'
 /**
   * UTILITY FUNCTIONS
   */
