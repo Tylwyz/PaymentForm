@@ -9,7 +9,7 @@ html.classList.add('js');
 
 
 if (html.id === 'home-page') {
-  var newAccountFieldset = document.querySelector('fieldset[name="new"]');
+  var newAccountFieldset = document.querySelectsiteor('fieldset[name="new"]');
   var newAccountCheckbox = document.querySelector('#create');
 
   newAccountFieldset.setAttribute('disabled', 'disabled');
@@ -29,6 +29,7 @@ if (html.id === 'shipping-page') {
   var sameInfoFieldset = document.querySelector('fieldset[name="billing-info"]');
   var sameInfocheckbox = document.querySelector('#same-info');
 
+
   sameInfoFieldset.setAttribute('disabled', 'disabled');
   sameInfoFieldset.setAttribute('aria-hidden', 'true');
 
@@ -43,6 +44,24 @@ if (html.id === 'shipping-page') {
     }
   })};
 
+if (html.id === 'billing-page') {
+    // Logic for billing form
+    var form = document.querySelector('form[name="billing"]');
+    restoreFormDataFromLocalStorage(form.name);
+    form.addEventListener('click', fillBilling);
+    form.addEventListener('submit', handleFormSubmission);
+  }
+
+if (html.id === 'shipping-page') {
+  var form = document.querySelector('form[name=shipping-info]');
+  form.addEventListener('submit',handleFormSubmission);
+  }
+
+if (html.id === 'home-page') {
+  var form = document.querySelector('form[name=login]');
+  form.addEventListener('submit',handleFormSubmission);
+
+}
 
   function handleFormSubmission(event) {
     var targetElement = event.target;
