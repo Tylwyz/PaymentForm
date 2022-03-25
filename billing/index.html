@@ -12,7 +12,7 @@
   </header>
 
   <main id="main">
-    <form name="login" action="summary./" aria-labelledby="form-label">
+    <form name="login" action="summary./" aria-labelledby="label-billing">
       <h2 id="form-label">Payment Information</h2>
 
       <fieldset name="payment-info">
@@ -31,11 +31,11 @@
           </li>
           <li>
             <label for="expyear">Experation Year</label>
-            <input type="number" name="expyear" id="expyear" required>
+            <input type="number" name="expyear" id="expyear" placeholder="YYYY" maxlength="4" required>
           </li>
           <li>
             <label for="vnumber">Security Code</label>
-            <input type="text" name="vnumber" id="vnumber" required>
+            <input type="text" name="vnumber" id="vnumber" maxlength="3" required>
           </li>
         </ol>
       </fieldset>
